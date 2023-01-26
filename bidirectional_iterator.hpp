@@ -40,15 +40,13 @@ namespace ft
 
         pointer getPointer(void) const;
 
-        /*--------------------------------------------------------------------------------*/
-
         bidirectional_iterator(void): _ptr(NULL) {}
 
         bidirectional_iterator(const bidirectional_iterator& x): _ptr(x._ptr) {}
 
         bidirectional_iterator(pointer newPtr) : _ptr(newPtr) {}
-
-		bidirectional_iterator&		operator = (const bidirectional_iterator& x) 
+        
+        bidirectional_iterator& operator=(const bidirectional_iterator& x) 
         {
 			if (&x == *this)
             {
@@ -63,7 +61,7 @@ namespace ft
 			this->_ptr = NULL;
         }
 
-		bool	operator==(const bidirectional_iterator& rhs) const 
+		bool operator==(const bidirectional_iterator& rhs) const 
         {
 			return (this->_ptr == rhs._ptr);
 	    }

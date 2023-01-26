@@ -84,7 +84,7 @@ namespace ft
 				return (tmp);
 			}
 
-			BSTIterator&    operator--(void) 
+			BSTIterator& operator--(void) 
             {
 				NodePtr		y;
 
@@ -109,7 +109,7 @@ namespace ft
 				return (*this);
 			}
 
-			BSTIterator	operator--(int) 
+			BSTIterator operator--(int) 
             {
 			    BSTIterator	tmp(*this);
 
@@ -134,7 +134,7 @@ namespace ft
 	public:
 		BST(const comp_operation& comp = comp_operation(), const allocator_type& alloc = allocator_type());
 
-		BST&		operator = (const BST& x);		
+		BST& operator=(const BST& x);		
 
 		~BST(void);		
 
@@ -213,7 +213,7 @@ namespace ft
 			return (this->_null);
 		}
 
-		bool	insertNode(ft::pair<Key, T> newPair) 
+		bool insertNode(ft::pair<Key, T> newPair) 
         {
 			bool isNewNode = false;
 
@@ -278,7 +278,7 @@ namespace ft
 			}
 		}
 
-		void	insertFix(NodePtr x)
+		void insertFix(NodePtr x)
         {
 			NodePtr	gp = NULL;
 			bool	r;
@@ -583,7 +583,7 @@ namespace ft
 			x->parent = y;
 		}
 
-		void	rightRotate(NodePtr x) 
+		void rightRotate(NodePtr x) 
         {
 		    if (x->lChild == this->_null)
             {
